@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    function isFibonacci(n) {
+        let fibo1 = 1;
+        let fibo2 = 1;
+        let newFibo = 0;
+        if (n < 1) {
+            return false;
+        }
+        if (n == 1) {
+            return true;
+        }
+        while (newFibo <= n) {
+            newFibo = fibo1 + fibo2;
+            fibo1 = fibo2;
+            fibo2 = newFibo;
+            if (newFibo == n) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    document.write(isFibonacci(22));
+</script>
